@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
+
 	export let hue: number = 320;
 </script>
 
@@ -37,36 +39,10 @@
 		</div>
 
 		<article>
-			<header>
-				<h2>Text Usage</h2>
-				<small>Lorem ipsum dolor</small>
-			</header>
-			<div class="card">
-				<h2>I'm a card</h2>
-				<small>I give credit</small>
-				<p>
-					This is based very heavily on <a
-						href="https://github.com/argyleink/gui-challenges/tree/main/color-palettes"
-						>Adam Argyle's colour palette with OKLCH gui challenge</a
-					>
-				</p>
-			</div>
-			<div class="card">
-				<h2>I've got a link</h2>
-				<small>You should go here</small>
-				<p>
-					Here is <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE"
-						>Adam's tutorial on youtube</a
-					>
-				</p>
-			</div>
-			<div class="card">
-				<h2>I'm another card</h2>
-				<small>I'm colourful!</small>
-				<p />
-				<p>There's an amazing colour picker at <a href="https://oklch.com">oklch.com</a></p>
-				<p>And another with a great contrast checker at <a href="https://www.oddcontrast.com/">oddcontrast.com</a></p>
-			</div>
+			<Header />
+			<Card1 />
+			<Card2 />
+			<Card3 />
 		</article>
 	</div>
 </div>
@@ -143,10 +119,6 @@
 		grid-auto-flow: column;
 	}
 
-	small {
-		color: var(--text-2);
-	}
-
 	.swatch {
 		box-shadow: inset 0 0 0 1px oklch(50% 0 0 / 20%);
 	}
@@ -188,22 +160,9 @@
 		grid-template-columns: 20vw;
 	}
 
-	.card {
-		display: grid;
-		gap: 1ch;
-		border-radius: 10px;
-		background: var(--surface-2);
-		border: 1px solid var(--surface-3);
-		padding: 1rem;
-	}
-
 	* {
 		box-sizing: border-box;
 		margin: 0;
-	}
-
-	p {
-		max-inline-size: 40ch;
 	}
 
 	article {

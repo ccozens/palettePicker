@@ -1,1 +1,5 @@
-// place files you want to import through the `$lib` alias in this folder.
+// Card
+export { default as Card } from './Card.svelte';
+
+// Header
+export { default as Header } from './Header.svelte';
