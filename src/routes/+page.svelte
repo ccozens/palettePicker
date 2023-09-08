@@ -6,7 +6,7 @@
 </script>
 
 <head>
-	<title>okLCH Color Palettes | GUI Challenges</title>
+	<title>okLCH Color Palettes Picker</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
