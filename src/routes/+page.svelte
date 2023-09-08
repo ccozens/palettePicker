@@ -1,29 +1,35 @@
 <script lang="ts">
-	import Picker from '$lib/components/Picker.svelte';
+	import { Picker, Swatch } from '$lib/components';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
 
 	export let hue: number = 320;
+
+	// create array of 10 swatches from 1 - 10
+	const swatches = {
+		swatch1: { lightness: '99', chroma: '0.05', hue: hue },
+		swatch2: { lightness: '90', chroma: '0.1', hue: hue },
+		swatch3: { lightness: '80', chroma: '0.2', hue: hue },
+		swatch4: { lightness: '72', chroma: '0.25', hue: hue },
+		swatch5: { lightness: '67', chroma: '0.31', hue: hue },
+		swatch6: { lightness: '50', chroma: '0.27', hue: hue },
+		swatch7: { lightness: '35', chroma: '0.25', hue: hue },
+		swatch8: { lightness: '25', chroma: '0.2', hue: hue },
+		swatch9: { lightness: '13', chroma: '0.2', hue: hue },
+		swatch10: { lightness: '5', chroma: '0.1', hue: hue }
+	};
 </script>
 
 <head>
 	<title>okLCH Color Palettes Picker</title>
-
 </head>
 
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
 	<div class="contentGrid">
 		<div class="palette">
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
-			<div class="swatch" />
+			{#each Object.values(swatches) as swatch}
+				<Swatch bind:swatch />
+			{/each}
 		</div>
 
 		<article>
@@ -70,41 +76,6 @@
 		place-content: center;
 		gap: 5vmin;
 		grid-auto-flow: column;
-	}
-
-	.swatch {
-		box-shadow: inset 0 0 0 1px oklch(50% 0 0 / 20%);
-	}
-
-	.swatch:nth-of-type(1) {
-		background: var(--swatch-1);
-	}
-	.swatch:nth-of-type(2) {
-		background: var(--swatch-2);
-	}
-	.swatch:nth-of-type(3) {
-		background: var(--swatch-3);
-	}
-	.swatch:nth-of-type(4) {
-		background: var(--swatch-4);
-	}
-	.swatch:nth-of-type(5) {
-		background: var(--swatch-5);
-	}
-	.swatch:nth-of-type(6) {
-		background: var(--swatch-6);
-	}
-	.swatch:nth-of-type(7) {
-		background: var(--swatch-7);
-	}
-	.swatch:nth-of-type(8) {
-		background: var(--swatch-8);
-	}
-	.swatch:nth-of-type(9) {
-		background: var(--swatch-9);
-	}
-	.swatch:nth-of-type(10) {
-		background: var(--swatch-10);
 	}
 
 	.palette {
