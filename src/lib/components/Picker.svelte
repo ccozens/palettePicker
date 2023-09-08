@@ -1,0 +1,49 @@
+<!-- script -->
+<script lang="ts">
+	export let hue: number = 320;
+</script>
+
+<!-- html -->
+<div class="picker">
+	<label for="hue">Hue</label>
+	<input type="range" min="0" max="360" step="1" bind:value={hue} />
+	{hue}
+</div>
+
+<style>
+	.picker {
+		display: flex;
+		padding: 1em;
+		gap: 1em;
+		background: var(--surface-3);
+	}
+
+	.picker > input {
+		flex-grow: 1;
+	}
+
+	/* style range slider and thumb */
+	/* remove original styles */
+	.picker > input[type='range'] {
+		-webkit-appearance: none;
+		outline: none;
+		background-color: transparent;
+	}
+
+	.picker > input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 0.75em;
+		height: 0.75em;
+		/* to centre on track, margin-top = (track height in pixels / 2) - (thumb height in pixels /2) */
+		margin-top: calc((1em / 2) - (0.75em / 2));
+		background-color: var(--text-1);
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.picker > input[type='range']::-webkit-slider-runnable-track {
+		height: 1em;
+		border-radius: 0.5em;
+		background-color: var(--swatch-4);
+	}
+</style>
