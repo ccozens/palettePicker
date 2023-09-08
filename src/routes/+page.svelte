@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { Picker, Swatch } from '$lib/components';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
-	import type { SwatchesType } from '$lib/types';
+	import type { SwatchType, SwatchesType } from '$lib/types';
 
 	export let hue: number = 320;
 
-	// create array of 10 swatches from 1 - 10
-	const swatches: SwatchesType = {
+	let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
+
+	// create array of 10 swatches storing lightness, chroma, and hue
+	let swatches: SwatchesType = {
 		swatch1: { lightness: 99, chroma: 0.05, hue: hue },
 		swatch2: { lightness: 90, chroma: 0.1, hue: hue },
 		swatch3: { lightness: 80, chroma: 0.2, hue: hue },
@@ -18,6 +20,17 @@
 		swatch9: { lightness: 13, chroma: 0.2, hue: hue },
 		swatch10: { lightness: 5, chroma: 0.1, hue: hue }
 	};
+
+	// log when hue updates
+	$: hue, console.log('hi from page.svelte ', hue);
+
+	// update swatches when hue updates
+	$: hue,
+		Object.values(swatches).forEach((swatch) => {
+			swatch.hue = hue;
+			// needed to reassign updated swatches to original swatches object
+			swatches = swatches;
+		});
 </script>
 
 <head>
@@ -26,6 +39,7 @@
 
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
+	{swatches.swatch1.hue}
 	<div class="contentGrid">
 		<div class="palette">
 			{#each Object.values(swatches) as swatch}
