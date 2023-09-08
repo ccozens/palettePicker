@@ -7,16 +7,7 @@
 
 <head>
 	<title>okLCH Color Palettes Picker</title>
-	<meta charset="utf-8" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="mobile-web-app-capable" content="yes" />
-	<meta name="theme-color" content="Canvas" />
-	<meta name="description" content="🙂" />
-	<link rel="icon" href="/favicon.ico" sizes="any" />
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-	<link rel="stylesheet" href="/style.css" />
-	<script type="module" src="/index.js"></script>
 </head>
 
 <div class="wrapper" style="--hue: {hue}">
