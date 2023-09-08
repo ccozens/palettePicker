@@ -1,21 +1,22 @@
 <script lang="ts">
 	import { Picker, Swatch } from '$lib/components';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
+	import type { SwatchesType } from '$lib/types';
 
 	export let hue: number = 320;
 
 	// create array of 10 swatches from 1 - 10
-	const swatches = {
-		swatch1: { lightness: '99', chroma: '0.05', hue: hue },
-		swatch2: { lightness: '90', chroma: '0.1', hue: hue },
-		swatch3: { lightness: '80', chroma: '0.2', hue: hue },
-		swatch4: { lightness: '72', chroma: '0.25', hue: hue },
-		swatch5: { lightness: '67', chroma: '0.31', hue: hue },
-		swatch6: { lightness: '50', chroma: '0.27', hue: hue },
-		swatch7: { lightness: '35', chroma: '0.25', hue: hue },
-		swatch8: { lightness: '25', chroma: '0.2', hue: hue },
-		swatch9: { lightness: '13', chroma: '0.2', hue: hue },
-		swatch10: { lightness: '5', chroma: '0.1', hue: hue }
+	const swatches: SwatchesType = {
+		swatch1: { lightness: 99, chroma: 0.05, hue: hue },
+		swatch2: { lightness: 90, chroma: 0.1, hue: hue },
+		swatch3: { lightness: 80, chroma: 0.2, hue: hue },
+		swatch4: { lightness: 72, chroma: 0.25, hue: hue },
+		swatch5: { lightness: 67, chroma: 0.31, hue: hue },
+		swatch6: { lightness: 50, chroma: 0.27, hue: hue },
+		swatch7: { lightness: 35, chroma: 0.25, hue: hue },
+		swatch8: { lightness: 25, chroma: 0.2, hue: hue },
+		swatch9: { lightness: 13, chroma: 0.2, hue: hue },
+		swatch10: { lightness: 5, chroma: 0.1, hue: hue }
 	};
 </script>
 

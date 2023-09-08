@@ -1,0 +1,2 @@
+// Swatch
+export * from './SwatchType';

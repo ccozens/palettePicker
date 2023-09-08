@@ -1,6 +1,6 @@
 <!-- script -->
 <script lang="ts">
-	export let swatch = {lightness: '50', chroma: '0.27', hue: 320}
+	export let swatch = {lightness: 50, chroma: 0.27, hue: 320}
 	const { lightness, chroma, hue} = swatch;
 
 export let background = `oklch(${lightness}% ${chroma} ${hue})`;
