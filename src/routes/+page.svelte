@@ -50,6 +50,7 @@
 
 		--text-1: var(--swatch-1);
 		--text-2: var(--swatch-2);
+		--link: var(--swatch-3);
 		--surface-1: var(--swatch-10);
 		--surface-2: var(--swatch-9);
 		--surface-3: var(--swatch-8);

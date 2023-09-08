@@ -37,4 +37,16 @@
 	p {
 		max-inline-size: 40ch;
 	}
+
+	/* style for injected html, restricted to local selector */
+	p :global(a) {
+		color: var(--link);
+		text-decoration: none;
+	}
+
+	p :global(a:hover) {
+		color: var(text-2);
+		font-weight: bold;
+	}
+
 </style>
