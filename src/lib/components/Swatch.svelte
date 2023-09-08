@@ -1,15 +1,16 @@
 <!-- script -->
 <script lang="ts">
-	export let swatch = {lightness: 50, chroma: 0.27, hue: 320}
-	const { lightness, chroma, hue} = swatch;
+	import type { SwatchType } from '$lib/types';
 
-export let background = `oklch(${lightness}% ${chroma} ${hue})`;
+	export let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
+	const { lightness, chroma, hue } = swatch;
 
+	export let background = `oklch(${lightness}% ${chroma} ${hue})`;
 </script>
 
 <!-- html -->
 
-<div class="swatch" style:background/>
+<div class="swatch" style:background />
 
 <style>
 	.swatch {
