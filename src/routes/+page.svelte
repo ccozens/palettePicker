@@ -99,13 +99,13 @@
 	.palette {
 		display: grid;
 		grid-auto-rows: 7vh;
-		grid-template-columns: 20vw 15vw;
+		grid-template-columns: repeat(2, 20vw);
 	}
 
 	.gridHeader {
 		grid-column: 2 / -1;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		place-items: center;
 	}
 

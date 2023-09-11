@@ -1,6 +1,7 @@
 <!-- script -->
 <script lang="ts">
 	import type { SwatchType } from '$lib/types';
+	import CopyButton from './CopyButton.svelte';
 
 	// create swatch prop
 	export let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
@@ -19,6 +20,7 @@
 	<input type="number" bind:value={swatch.lightness} min="0" max="100" />
 	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
 	<input type="number" bind:value={swatch.hue} min="0" max="360" />
+	<CopyButton bind:swatch />
 </div>
 
 <style>
@@ -34,8 +36,7 @@
 
 	.values {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		border: solid 1px var(--swatch-1);
+		grid-template-columns: repeat(4, 1fr);
 		place-items: center;
 	}
 
