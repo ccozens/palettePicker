@@ -32,20 +32,24 @@
 
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
-	{swatches.swatch1.hue}
-	<div class="contentGrid">
-		<div class="palette">
-			{#each Object.values(swatches) as swatch}
-				<Swatch {swatch} />
-			{/each}
-		</div>
 
+	<div class="contentGrid">
 		<article>
 			<Header />
 			<Card1 />
 			<Card2 />
 			<Card3 />
 		</article>
+
+		<div class="palette">
+			{#each Object.values(swatches) as swatch}
+				<Swatch {swatch} />
+			{/each}
+		</div>
+	</div>
+
+	<div class="styles">
+		
 	</div>
 </div>
 
@@ -92,7 +96,6 @@
 		grid-auto-rows: 7vh;
 		grid-template-columns: 20vw;
 	}
-
 
 	article {
 		display: grid;
