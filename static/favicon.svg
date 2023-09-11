@@ -1,0 +1,5 @@
+<svg class="target" viewBox="0 0 100 100">
+	<circle cx="50" cy="50" r="30" fill="#FFB000" />
+	<circle cx="50" cy="50" r="20" fill="#FE6100" />
+	<circle cx="50" cy="50" r="10" fill="#DC277F"/>
+</svg>
