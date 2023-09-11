@@ -29,4 +29,14 @@
 		box-shadow: inset 0 0 0 1px var(--surface-2);
 		transition: box-shadow 0.2s ease-in-out;
 	}
+
+	button:hover {
+		box-shadow: inset 0 0 0 1px var(--swatch-6), 0 0 0 2px var(--surface-3);
+		cursor: copy;
+	}
+
+	button:active {
+		background: var(--swatch-6);
+		box-shadow: 0px 0px 10px 5px var(--swatch-6);
+	}
 </style>
