@@ -48,7 +48,7 @@
 				<div>hue</div>
 			</div>
 			{#each Object.values(swatches) as swatch}
-				<Swatch {swatch} />
+				<Swatch bind:swatch />
 			{/each}
 		</div>
 	</div>
