@@ -21,9 +21,6 @@
 		swatch10: { lightness: 5, chroma: 0.1, hue: hue }
 	};
 
-	// log when hue updates
-	$: hue, console.log('hi from page.svelte ', hue);
-
 	// update swatches when hue updates
 	$: hue,
 		Object.values(swatches).forEach((swatch) => {
@@ -43,7 +40,7 @@
 	<div class="contentGrid">
 		<div class="palette">
 			{#each Object.values(swatches) as swatch}
-				<Swatch bind:swatch />
+				<Swatch {swatch} />
 			{/each}
 		</div>
 

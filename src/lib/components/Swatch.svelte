@@ -5,12 +5,14 @@
 	export let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
 	let { lightness, chroma, hue } = swatch;
 
-	export let background = `oklch(${lightness}% ${chroma} ${hue})`;
+	$:	({ lightness, chroma, hue } = swatch);
+	$: background = `oklch(${lightness}% ${chroma} ${hue})`;
 </script>
 
 <!-- html -->
 
 <div class="swatch" style:background />
+{hue}
 
 <style>
 	.swatch {
