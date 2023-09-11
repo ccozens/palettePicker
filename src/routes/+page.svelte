@@ -30,9 +30,6 @@
 		});
 </script>
 
-<head>
-	<title>okLCH Color Palettes Picker</title>
-</head>
 
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
