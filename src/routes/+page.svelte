@@ -42,6 +42,11 @@
 		</article>
 
 		<div class="palette">
+			<div class="gridHeader">
+				<div>lightness</div>
+				<div>chroma</div>
+				<div>hue</div>
+			</div>
 			{#each Object.values(swatches) as swatch}
 				<Swatch {swatch} />
 			{/each}
@@ -49,7 +54,7 @@
 	</div>
 
 	<div class="styles">
-		
+
 	</div>
 </div>
 
@@ -94,7 +99,14 @@
 	.palette {
 		display: grid;
 		grid-auto-rows: 7vh;
-		grid-template-columns: 20vw;
+		grid-template-columns: 20vw 15vw;
+	}
+
+	.gridHeader {
+		grid-column: 2 / -1;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center;
 	}
 
 	article {

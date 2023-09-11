@@ -9,3 +9,6 @@ export { default as Picker } from './Picker.svelte';
 
 // Swatch
 export { default as Swatch } from './Swatch.svelte';
+
+// SwatchValues
+export { default as SwatchValues } from './SwatchValues.svelte';

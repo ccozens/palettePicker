@@ -11,7 +11,6 @@
 
 <!-- html -->
 
-<div class="swatch" style:background />
 <div class="values">
 	{#each Object.entries(swatch) as [key, value]}
 		<p>{key}: {value}</p>
@@ -19,16 +18,6 @@
 </div>
 
 <style>
-	.swatch {
-		box-shadow: inset 0 0 0 1px oklch(50% 0 0 / 20%);
-		transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
-	}
-
-	.swatch:hover {
-		transform: scale(1.05);
-		border: solid 1px var(--swatch-1);
-	}
-
 	.values {
 		display: flex;
 		flex-direction: column;

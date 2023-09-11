@@ -12,6 +12,11 @@
 <!-- html -->
 
 <div class="swatch" style:background />
+<div class="values">
+	<div>{lightness}</div>
+	<div>{chroma}</div>
+	<div>{hue}</div>
+</div>
 
 <style>
 	.swatch {
@@ -22,5 +27,12 @@
 	.swatch:hover {
 		transform: scale(1.05);
 		border: solid 1px var(--swatch-1);
+	}
+
+	.values {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		border: solid 1px var(--swatch-1);
+		place-items: center;
 	}
 </style>
