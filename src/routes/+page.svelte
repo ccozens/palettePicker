@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { Picker, Swatch } from '$lib/components';
 	import CopyButton from '$lib/components/CopyButton.svelte';
+	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
 	import type { SwatchType, SwatchesType } from '$lib/types';
 
 	export let hue: number = 320;
-
-	let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
 
 	// create array of 10 swatches storing lightness, chroma, and hue
 	let swatches: SwatchesType = {
@@ -34,6 +33,7 @@
 	$: swatchesString = JSON.stringify(swatches);
 </script>
 
+	<GithubCorner fillProp={swatches.swatch5} colorProp={swatches.swatch9}/>
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
 
@@ -47,8 +47,8 @@
 				<CopyButton
 					buttonWidth="100%"
 					buttonHeight="100%"
-					shadow1='0'
-					shadow2='0'
+					shadow1="0"
+					shadow2="0"
 					displayText="Copy whole palette"
 					bind:copyText={swatchesString}
 				/>
@@ -69,6 +69,8 @@
 </div>
 
 <style>
+
+
 	.wrapper {
 		--swatch-1: oklch(99% 0.05 var(--hue));
 		--swatch-2: oklch(90% 0.1 var(--hue));
@@ -143,8 +145,7 @@
 
 	.copyHighlight {
 		border-radius: 0.25rem;
-		box-shadow: 0px 0px 5px 5px var(--swatch-6),
-					0px 0px 4px  var(--swatch-6),
-					0px 0px 8px  var(--swatch-6);
+		box-shadow: 0px 0px 5px 5px var(--swatch-6), 0px 0px 4px var(--swatch-6),
+			0px 0px 8px var(--swatch-6);
 	}
 </style>

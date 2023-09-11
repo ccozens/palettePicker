@@ -2,10 +2,10 @@
 	import { Card } from '$lib/components';
 
 	const cardContent = {
-		heading: "I'm a card",
-		small: 'I give credit',
+		heading: "What to do?",
+		small: 'Pick colours',
 		content:
-			'This is based very heavily on <a href="https://github.com/argyleink/gui-challenges/tree/main/color-palettes">Adam Argyle\'s colour palette with OKLCH gui challenge</a>'
+			'Slide the slider, tweak the individual values, copy the swatch, copy the whole palette, and have fun!'
 	};
 </script>
 

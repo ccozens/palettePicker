@@ -2,10 +2,10 @@
 	import { Card } from '$lib/components';
 
 	const cardContent = {
-		heading: "I've got a link",
-		small: 'You should go here',
+		heading: "I'm a card",
+		small: 'I give credit',
 		content:
-			'Here is <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE">Adam\'s tutorial on youtube</a>'
+			'This is based very heavily on <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE">Adam Argyle\'s colour palette with OKLCH gui challenge</a>'
 	};
 </script>
 
