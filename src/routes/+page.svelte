@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Picker, Swatch } from '$lib/components';
+	import CopyButton from '$lib/components/CopyButton.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
 	import type { SwatchType, SwatchesType } from '$lib/types';
 
@@ -28,6 +29,9 @@
 			// needed to reassign updated swatches to original swatches object
 			swatches = swatches;
 		});
+
+	// stringify swatches object
+	$: swatchesString = JSON.stringify(swatches);
 </script>
 
 <div class="wrapper" style="--hue: {hue}">
@@ -39,6 +43,12 @@
 			<Card1 />
 			<Card2 />
 			<Card3 />
+			<CopyButton
+				buttonWidth="100%"
+				buttonHeight="100%"
+				displayText="Copy whole palette"
+				bind:copyText={swatchesString}
+			/>
 		</article>
 
 		<div class="palette">
@@ -51,10 +61,6 @@
 				<Swatch bind:swatch />
 			{/each}
 		</div>
-	</div>
-
-	<div class="styles">
-
 	</div>
 </div>
 
@@ -107,6 +113,12 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		place-items: center;
+	}
+
+	.gridFooter {
+		grid-column: 1 / -1;
+		place-self: center;
+		width: 100%;
 	}
 
 	article {
