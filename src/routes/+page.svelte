@@ -43,12 +43,16 @@
 			<Card1 />
 			<Card2 />
 			<Card3 />
-			<CopyButton
-				buttonWidth="100%"
-				buttonHeight="100%"
-				displayText="Copy whole palette"
-				bind:copyText={swatchesString}
-			/>
+			<div class="copyHighlight">
+				<CopyButton
+					buttonWidth="100%"
+					buttonHeight="100%"
+					shadow1='0'
+					shadow2='0'
+					displayText="Copy whole palette"
+					bind:copyText={swatchesString}
+				/>
+			</div>
 		</article>
 
 		<div class="palette">
@@ -135,5 +139,12 @@
 			--surface-2: var(--swatch-2);
 			--surface-3: var(--swatch-3);
 		}
+	}
+
+	.copyHighlight {
+		border-radius: 0.25rem;
+		box-shadow: 0px 0px 5px 5px var(--swatch-6),
+					0px 0px 4px  var(--swatch-6),
+					0px 0px 8px  var(--swatch-6);
 	}
 </style>
