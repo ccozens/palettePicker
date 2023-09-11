@@ -12,7 +12,6 @@
 <!-- html -->
 
 <div class="swatch" style:background />
-{hue}
 
 <style>
 	.swatch {

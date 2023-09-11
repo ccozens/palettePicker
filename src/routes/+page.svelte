@@ -30,7 +30,6 @@
 		});
 </script>
 
-
 <div class="wrapper" style="--hue: {hue}">
 	<Picker bind:hue />
 	{swatches.swatch1.hue}
@@ -76,8 +75,9 @@
 		background: var(--surface-1);
 		padding: 2em 1em 1em 1em;
 		color: var(--text-1);
-		max-height: 80vh;
 		font-family: system-ui, sans-serif;
+
+		height: 100vh;
 	}
 
 	.contentGrid {
@@ -93,10 +93,6 @@
 		grid-template-columns: 20vw;
 	}
 
-	* {
-		box-sizing: border-box;
-		margin: 0;
-	}
 
 	article {
 		display: grid;
