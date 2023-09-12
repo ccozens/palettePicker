@@ -33,7 +33,8 @@
 	--shadow1: {shadow1};
 	--shadow2: {shadow2};
 	opacity: 1;
-	font-weight: 600;"
+	font-weight: 600;
+	padding: 0.7rem;"
 		use:copy={copyText}>{displayText}</button
 	>
 {/if}
@@ -43,12 +44,11 @@
 		border: none;
 		background: var(--surface-3);
 		background: transparent;
-		text-align: center;
 		color: inherit;
 		width: var(--button-width);
 		height: var(--button-height);
-		font-size: 1rem;
-		padding: 0.5rem;
+		padding: 0 0.7rem 0.7rem 0.7rem;
+		margin: 0.2rem;
 		border-radius: 0.25rem;
 		box-shadow: inset 0 0 0 1px var(--surface-2);
 		opacity: 0.5;
