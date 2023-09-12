@@ -113,13 +113,6 @@
 		place-items: center;
 	}
 
-
-	article {
-		display: grid;
-		gap: 2ch;
-		align-content: start;
-	}
-
 	@media (prefers-color-scheme: light) {
 		.wrapper {
 			--text-1: var(--swatch-10);
