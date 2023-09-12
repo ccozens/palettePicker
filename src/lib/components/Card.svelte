@@ -26,6 +26,7 @@
 		background: var(--surface-2);
 		border: 1px solid var(--surface-3);
 		padding: 1rem;
+		margin: 1rem;
 	}
 
 	.card h2 {

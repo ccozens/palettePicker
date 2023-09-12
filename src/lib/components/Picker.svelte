@@ -14,9 +14,10 @@
 		display: flex;
 		padding: 1em;
 		gap: 1em;
-		background: var(--surface-3);
-		width: 80%;
-		margin: 0 auto;
+		border-radius: 10px;
+		background: var(--surface-2);
+		border: 1px solid var(--surface-3);
+		margin: 1rem;
 	}
 
 	.picker > input {

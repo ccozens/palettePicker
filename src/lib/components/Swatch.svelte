@@ -15,10 +15,10 @@
 </script>
 
 <!-- html -->
+<div class="values">
 <a data-sveltekit-preload-data="hover" href={link} target="_blank" class="swatch" style:background
 	><span class="screen-reader-only">Link to OKLCH.com colour viewer</span></a
 >
-<div class="values">
 	<!-- bind:value={swatch.lightness} as this passes  the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
 	<input class="lightnessInput" type="number" bind:value={swatch.lightness} min="0" max="100" />
 	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
@@ -30,6 +30,8 @@
 	.swatch {
 		box-shadow: inset 0 0 0 1px oklch(50% 0 0 / 20%);
 		transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+		width: 100%;
+		height: 100%;
 	}
 
 	.swatch:hover {
@@ -39,7 +41,7 @@
 
 	.values {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		place-items: center;
 	}
 

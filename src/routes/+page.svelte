@@ -33,44 +33,41 @@
 	$: swatchesString = JSON.stringify(swatches);
 </script>
 
-	<GithubCorner fillProp={swatches.swatch5} colorProp={swatches.swatch9}/>
+<GithubCorner fillProp={swatches.swatch5} colorProp={swatches.swatch9} />
 <div class="wrapper" style="--hue: {hue}">
-	<Picker bind:hue />
-
 	<div class="contentGrid">
-		<article>
 			<Header />
 			<Card1 />
 			<Card2 />
 			<Card3 />
-			<div class="copyHighlight">
-				<CopyButton
-					buttonWidth="100%"
-					buttonHeight="100%"
-					shadow1="0"
-					shadow2="0"
-					displayText="Copy whole palette"
-					bind:copyText={swatchesString}
-				/>
-			</div>
-		</article>
+			<Picker bind:hue />
 
 		<div class="palette">
 			<div class="gridHeader">
+				<div />
 				<div>lightness</div>
 				<div>chroma</div>
 				<div>hue</div>
+				<div />
 			</div>
 			{#each Object.values(swatches) as swatch}
 				<Swatch bind:swatch />
 			{/each}
 		</div>
+		<div class="copyHighlight">
+			<CopyButton
+				buttonWidth="100%"
+				buttonHeight="100%"
+				shadow1="0"
+				shadow2="0"
+				displayText="Copy whole palette"
+				bind:copyText={swatchesString}
+			/>
+		</div>
 	</div>
 </div>
 
 <style>
-
-
 	.wrapper {
 		--swatch-1: oklch(99% 0.05 var(--hue));
 		--swatch-2: oklch(90% 0.1 var(--hue));
@@ -96,14 +93,9 @@
 		background: var(--surface-1);
 		padding: 2em 1em 1em 1em;
 		color: var(--text-1);
-		height: 100vh;
 	}
 
 	.contentGrid {
-		display: grid;
-		place-content: center;
-		gap: 5vmin;
-		grid-auto-flow: column;
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
 		width: fit-content;
 		margin: 0 auto;
@@ -112,23 +104,15 @@
 	}
 
 	.palette {
-		display: grid;
-		grid-auto-rows: 7vh;
-		grid-template-columns: repeat(2, 20vw);
+		margin: 1em auto;
 	}
 
 	.gridHeader {
-		grid-column: 2 / -1;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		place-items: center;
 	}
 
-	.gridFooter {
-		grid-column: 1 / -1;
-		place-self: center;
-		width: 100%;
-	}
 
 	article {
 		display: grid;
