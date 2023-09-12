@@ -96,8 +96,6 @@
 		background: var(--surface-1);
 		padding: 2em 1em 1em 1em;
 		color: var(--text-1);
-		font-family: system-ui, sans-serif;
-
 		height: 100vh;
 	}
 

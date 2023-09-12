@@ -16,6 +16,8 @@
 		padding: 1em;
 		gap: 1em;
 		background: var(--surface-3);
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	.picker > input {

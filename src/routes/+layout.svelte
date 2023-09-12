@@ -25,6 +25,7 @@
 	:global(body) {
 		line-height: 1.5;
 		-webkit-font-smoothing: antialiased;
+		font-family: 'Inter', sans-serif;
 	}
 	/*
   5. Improve media defaults
