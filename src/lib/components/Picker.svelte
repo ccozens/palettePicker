@@ -20,6 +20,10 @@
 		margin: 1rem;
 	}
 
+	.picker:hover {
+		box-shadow: inset 0 0 0 1px var(--swatch-6), 0 0 0 2px var(--surface-3);
+	}
+
 	.picker > input {
 		flex-grow: 1;
 	}
