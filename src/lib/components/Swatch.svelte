@@ -15,7 +15,9 @@
 </script>
 
 <!-- html -->
-<a data-sveltekit-preload-data="hover" href={link} target="_blank" class="swatch" style:background />
+<a data-sveltekit-preload-data="hover" href={link} target="_blank" class="swatch" style:background
+	><span class="screen-reader-only">Link to OKLCH.com colour viewer</span></a
+>
 <div class="values">
 	<!-- bind:value={swatch.lightness} as this passes  the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
 	<input class="lightnessInput" type="number" bind:value={swatch.lightness} min="0" max="100" />
@@ -71,5 +73,16 @@
 
 	input[type='number'] {
 		-moz-appearance: textfield;
+	}
+
+	/* screen reader class from https://ionic.io/docs/accessibility/visibility */
+	.screen-reader-only {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		position: absolute;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 1px;
 	}
 </style>
