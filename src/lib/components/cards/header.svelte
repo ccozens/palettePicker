@@ -2,8 +2,8 @@
 	import { Header } from '$lib/components';
 
 	const cardContent = {
-		heading: 'Text usage',
-		small: 'Lorem ipsum dolor',
+		heading: 'Palette picker',
+		small: 'OKLCH colour space',
 		content: ''
 	};
 </script>
