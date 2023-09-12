@@ -135,4 +135,14 @@
 		box-shadow: 0px 0px 5px 5px var(--swatch-6), 0px 0px 4px var(--swatch-6),
 			0px 0px 8px var(--swatch-6);
 	}
+
+	@media (min-width: 1000px) {
+		.wrapper {
+			min-height: 100vh;
+		}
+		.contentGrid {
+			columns: 2;
+			margin: auto;
+		}
+	}
 </style>

@@ -5,7 +5,7 @@
 		heading: "I'm a card",
 		small: 'I give credit',
 		content:
-			'This is based very heavily on <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE">Adam Argyle\'s colour palette with OKLCH gui challenge</a>'
+			'This was inspired by <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE">Adam Argyle\'s colour palette with OKLCH gui challenge</a>'
 	};
 </script>
 
