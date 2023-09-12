@@ -104,6 +104,11 @@
 		place-content: center;
 		gap: 5vmin;
 		grid-auto-flow: column;
+		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
+		width: fit-content;
+		margin: 0 auto;
+		padding: 1em;
+		border-radius: 0.25rem;
 	}
 
 	.palette {
