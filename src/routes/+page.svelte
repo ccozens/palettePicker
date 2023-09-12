@@ -3,10 +3,10 @@
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
-	import type { SwatchType, SwatchesType } from '$lib/types';
+	import { allSwatchesToVariables } from '$lib/functions';
+	import type { SwatchesType } from '$lib/types';
 
-	export let hue: number = 320;
-
+	export let hue: 320;
 	// create array of 10 swatches storing lightness, chroma, and hue
 	let swatches: SwatchesType = {
 		swatch1: { lightness: 99, chroma: 0.05, hue: hue },
@@ -21,26 +21,27 @@
 		swatch10: { lightness: 5, chroma: 0.1, hue: hue }
 	};
 
-	// update swatches when hue updates
+	// update updatingSwatches when hue updates
 	$: hue,
 		Object.values(swatches).forEach((swatch) => {
 			swatch.hue = hue;
 			// needed to reassign updated swatches to original swatches object
-			swatches = swatches;
+			swatches = { ...swatches };
 		});
 
 	// stringify swatches object
-	$: swatchesString = JSON.stringify(swatches);
+	$: swatchesString = allSwatchesToVariables(swatches);
 </script>
 
 <GithubCorner fillProp={swatches.swatch5} colorProp={swatches.swatch9} />
+
 <div class="wrapper" style="--hue: {hue}">
 	<div class="contentGrid">
-			<Header />
-			<Card1 />
-			<Card2 />
-			<Card3 />
-			<Picker bind:hue />
+		<Header />
+		<Card1 />
+		<Card2 />
+		<Card3 />
+		<Picker bind:hue />
 
 		<div class="palette">
 			<div class="gridHeader">
@@ -139,3 +140,4 @@
 		}
 	}
 </style>
+

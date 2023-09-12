@@ -2,6 +2,7 @@
 <script lang="ts">
 	export let heading: string = '';
 	export let small: string = '';
+	export const content: string = '';
 </script>
 
 <!-- html -->
