@@ -1,3 +1,9 @@
+<script lang="ts">
+	import { Analytics } from '$lib/components';
+</script>
+
+<Analytics />
+
 <slot />
 
 <style>

@@ -1,3 +1,6 @@
+// Analytics
+export { default as Analytics } from './Analytics.svelte';
+
 // Card
 export { default as Card } from './Card.svelte';
 

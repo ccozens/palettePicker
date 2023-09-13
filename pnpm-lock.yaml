@@ -11,6 +11,9 @@ devDependencies:
   '@sveltejs/kit':
     specifier: ^1.20.4
     version: 1.24.1(svelte@4.2.0)(vite@4.4.9)
+  '@types/gtag.js':
+    specifier: ^0.0.13
+    version: 0.0.13
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.45.0
     version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.48.0)(typescript@5.2.2)
@@ -455,6 +458,10 @@ packages:
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
+
+  /@types/gtag.js@0.0.13:
+    resolution: {integrity: sha512-yOXFkfnt1DQr1v9B4ERulJOGnbdVqnPHV8NG4nkQhnu4qbrJecQ06DlaKmSjI3nzIwBj5U9/X61LY4sTc2KbaQ==}
     dev: true
 
   /@types/json-schema@7.0.12:
