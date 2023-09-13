@@ -16,7 +16,7 @@
 <!-- html -->
 <div class="picker">
 	<label for="hue">Hue</label>
-	<input type="range" min="0" max="360" step="1" bind:value={hue} on:change={updateAllSwatches} />
+	<input type="range" min="0" max="360" step="1" bind:value={hue} on:input={updateAllSwatches} />
 </div>
 
 <style>
