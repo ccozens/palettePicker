@@ -1,36 +1,34 @@
 <!-- script -->
 <script lang="ts">
-	import type { SwatchType } from '$lib/types';
+	import { derivedSwatches } from '$lib/stores/swatches';
 	import { singleSwatchToVariable } from '$lib/functions';
 	import CopyButton from './CopyButton.svelte';
 
-	// create swatch prop
-	export let swatch: SwatchType = { lightness: 50, chroma: 0.27, hue: 320 };
 
-	// reactive assignments so values update when swatch changes
-	$: ({ lightness, chroma, hue } = swatch);
-	// create reactive background variable
-	$: background = `oklch(${lightness}% ${chroma} ${hue})`;
-	$: swatchString = singleSwatchToVariable(swatch);
-	$: link = `https://oklch.com/#${lightness},${chroma},${hue},100`;
+	// $: swatchString = singleSwatchToVariable(swatch);
+	// $: link = `https://oklch.com/#${lightness},${chroma},${hue},100`;
+	const link = 'beep'
 </script>
 
 <!-- html -->
 <div class="values">
+	{#each $derivedSwatches as derivedSwatch}
 	<a
 		data-sveltekit-preload-data="hover"
 		href={link}
 		target="_blank"
 		class="swatch"
-		style:background
+		style="background:{derivedSwatch.colour}"
 	>
 		<span class="screen-reader-only">Link to OKLCH.com colour viewer</span>
 	</a>
 	<!-- bind:value={swatch.lightness} as this passes  the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
-	<input class="lightnessInput" type="number" bind:value={swatch.lightness} min="0" max="100" />
-	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
-	<input type="number" bind:value={swatch.hue} min="0" max="360" />
-	<CopyButton bind:copyText={swatchString} />
+	<input type="number" bind:value={derivedSwatch.lightness} min="0" max="100" />
+	<input type="number" bind:value={derivedSwatch.chroma} min="0" max="1" step="0.01" />
+	<input type="number" bind:value={derivedSwatch.hue} min="0" max="360" />
+	<!-- <CopyButton bind:copyText={derivedSwatch} /> -->
+	<p>copy</p>
+	{/each}
 </div>
 
 <style>

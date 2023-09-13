@@ -5,35 +5,16 @@
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
 	import { allSwatchesToVariables } from '$lib/functions';
 	import type { SwatchesType } from '$lib/types';
-	
-	export let hue: 320;
-	// create array of 10 swatches storing lightness, chroma, and hue
-	let swatches: SwatchesType = {
-		swatch1: { lightness: 99, chroma: 0.05, hue: hue },
-		swatch2: { lightness: 90, chroma: 0.1, hue: hue },
-		swatch3: { lightness: 80, chroma: 0.2, hue: hue },
-		swatch4: { lightness: 72, chroma: 0.25, hue: hue },
-		swatch5: { lightness: 67, chroma: 0.31, hue: hue },
-		swatch6: { lightness: 50, chroma: 0.27, hue: hue },
-		swatch7: { lightness: 35, chroma: 0.25, hue: hue },
-		swatch8: { lightness: 25, chroma: 0.2, hue: hue },
-		swatch9: { lightness: 13, chroma: 0.2, hue: hue },
-		swatch10: { lightness: 5, chroma: 0.1, hue: hue }
-	};
+	import { swatches, derivedSwatches } from '$lib/stores/swatches';
 
-	// update updatingSwatches when hue updates
-	$: hue,
-		Object.values(swatches).forEach((swatch) => {
-			swatch.hue = hue;
-			// needed to reassign updated swatches to original swatches object
-			swatches = { ...swatches };
-		});
+	export let hue: 320;
+
 
 	// stringify swatches object
-	$: swatchesString = allSwatchesToVariables(swatches);
+	// $: swatchesString = allSwatchesToVariables(swatches);
 </script>
 
-<GithubCorner fillProp={swatches.swatch5} colorProp={swatches.swatch9} />
+<GithubCorner  />
 
 <div class="wrapper" style="--hue: {hue}">
 	<div class="contentGrid">
@@ -50,16 +31,14 @@
 				<div>chroma</div>
 				<div>hue</div>
 			</div>
-			{#each Object.values(swatches) as swatch}
-				<Swatch bind:swatch />
-			{/each}
+				<Swatch />
 		</div>
-			<CopyButton
+			<!-- <CopyButton
 				buttonWidth="100%"
 				buttonHeight="100%"
 				displayText="Copy whole palette"
 				bind:copyText={swatchesString}
-			/>
+			/> -->
 		</div>
 </div>
 

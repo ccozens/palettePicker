@@ -1,9 +1,8 @@
 <script lang="ts">
-	export let fillProp = { lightness: 50, chroma: 0.27, hue: 320 };
-	export let colorProp = { lightness: 72, chroma: 0.25, hue: 196 };
+	import { derivedSwatches } from '$lib/stores/swatches';
 
-	$: fill = `oklch(${fillProp.lightness}% ${fillProp.chroma} ${fillProp.hue})`;
-	$: color = `oklch(${colorProp.lightness}% ${colorProp.chroma} ${colorProp.hue})`;
+	$: fill = $derivedSwatches[4].colour;
+	$: color = $derivedSwatches[9].colour;;
 </script>
 
 <a
