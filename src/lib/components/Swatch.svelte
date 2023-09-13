@@ -1,27 +1,27 @@
 <!-- script -->
 <script lang="ts">
-	import { derivedSwatches } from '$lib/stores/swatches';
+	import { swatches, derivedSwatches } from '$lib/stores/swatches';
 	import CopyButton from './CopyButton.svelte';
 
 </script>
 
 <!-- html -->
 <div class="values">
-	{#each $derivedSwatches as derivedSwatch, index}
+	{#each $swatches as swatch, index}
 	<a
 		data-sveltekit-preload-data="hover"
-		href='https://oklch.com/#{derivedSwatch.lightness},{derivedSwatch.chroma},{derivedSwatch.hue},100'
+		href='https://oklch.com/#{swatch.lightness},{swatch.chroma},{swatch.hue},100'
 		target="_blank"
 		class="swatch"
-		style="background:{derivedSwatch.colour}"
+		style="background:{$derivedSwatches[index].colour}"
 	>
 		<span class="screen-reader-only">Link to OKLCH.com colour viewer</span>
 	</a>
-	<!-- bind:value={swatch.lightness} as this passes  the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
-	<input type="number" bind:value={derivedSwatch.lightness} min="0" max="100" />
-	<input type="number" bind:value={derivedSwatch.chroma} min="0" max="1" step="0.01" />
-	<input type="number" bind:value={derivedSwatch.hue} min="0" max="360" />
-	<CopyButton bind:copyText={derivedSwatch.colour} />
+	<!-- bind:value={swatch.lightness} as this passes the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
+	<input type="number" bind:value={swatch.lightness} min="0" max="100" />
+	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
+	<input type="number" bind:value={swatch.hue} min="0" max="360" />
+	<CopyButton bind:copyText={$derivedSwatches[index].colour} />
 	{/each}
 </div>
 

@@ -3,6 +3,7 @@
 	import { copy } from 'svelte-copy';
 	import CopyMaterialSymbols from '$lib/assets/copyMaterialSymbols.svelte';
 
+
 	export let buttonWidth = '60%';
 	export let buttonHeight = '70%';
 	export let displayText = '';
@@ -77,3 +78,4 @@
 		transform: none;
 	}
 </style>
+

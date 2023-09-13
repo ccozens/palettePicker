@@ -3,18 +3,13 @@
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
-	import { derivedSwatches } from '$lib/stores/swatches';
+	import { formattedSwatches } from '$lib/stores/swatches';
 	export let hue: 320;
 
-	function formatDerivedSwatches() {
-		let formattedSwatches = '';
-		$derivedSwatches.forEach((swatch, index) => {
-			formattedSwatches += `--swatch-${index}: ${swatch.colour}\n`;
-		});
-		return formattedSwatches;
-	}
+	const swatchSetup =
+		'--text-1: var(--swatch-1);\n--text-2: var(--swatch-2);\n--link: var(--swatch-3);\n--surface-1: var(--swatch-10);\n--surface-2: var(--swatch-9);\n--surface-3: var(--swatch-8);';
 
-	$: formattedSwatches = formatDerivedSwatches();
+	$: swatchesString = $formattedSwatches.join(';\n') + ';\n' + ';\n' + swatchSetup;
 </script>
 
 <GithubCorner />
@@ -40,7 +35,7 @@
 			buttonWidth="100%"
 			buttonHeight="100%"
 			displayText="Copy whole palette"
-			bind:copyText={formattedSwatches}
+			bind:copyText={swatchesString}
 		/>
 	</div>
 </div>
