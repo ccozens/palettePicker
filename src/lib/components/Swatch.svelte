@@ -1,21 +1,16 @@
 <!-- script -->
 <script lang="ts">
 	import { derivedSwatches } from '$lib/stores/swatches';
-	import { singleSwatchToVariable } from '$lib/functions';
 	import CopyButton from './CopyButton.svelte';
 
-
-	// $: swatchString = singleSwatchToVariable(swatch);
-	// $: link = `https://oklch.com/#${lightness},${chroma},${hue},100`;
-	const link = 'beep'
 </script>
 
 <!-- html -->
 <div class="values">
-	{#each $derivedSwatches as derivedSwatch}
+	{#each $derivedSwatches as derivedSwatch, index}
 	<a
 		data-sveltekit-preload-data="hover"
-		href={link}
+		href='https://oklch.com/#{derivedSwatch.lightness},{derivedSwatch.chroma},{derivedSwatch.hue},100'
 		target="_blank"
 		class="swatch"
 		style="background:{derivedSwatch.colour}"
@@ -26,8 +21,7 @@
 	<input type="number" bind:value={derivedSwatch.lightness} min="0" max="100" />
 	<input type="number" bind:value={derivedSwatch.chroma} min="0" max="1" step="0.01" />
 	<input type="number" bind:value={derivedSwatch.hue} min="0" max="360" />
-	<!-- <CopyButton bind:copyText={derivedSwatch} /> -->
-	<p>copy</p>
+	<CopyButton bind:copyText={derivedSwatch.colour} />
 	{/each}
 </div>
 

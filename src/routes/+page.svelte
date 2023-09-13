@@ -3,18 +3,21 @@
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
-	import { allSwatchesToVariables } from '$lib/functions';
-	import type { SwatchesType } from '$lib/types';
-	import { swatches, derivedSwatches } from '$lib/stores/swatches';
-
+	import { derivedSwatches } from '$lib/stores/swatches';
 	export let hue: 320;
 
+	function formatDerivedSwatches() {
+		let formattedSwatches = '';
+		$derivedSwatches.forEach((swatch, index) => {
+			formattedSwatches += `--swatch-${index}: ${swatch.colour}\n`;
+		});
+		return formattedSwatches;
+	}
 
-	// stringify swatches object
-	// $: swatchesString = allSwatchesToVariables(swatches);
+	$: formattedSwatches = formatDerivedSwatches();
 </script>
 
-<GithubCorner  />
+<GithubCorner />
 
 <div class="wrapper" style="--hue: {hue}">
 	<div class="contentGrid">
@@ -31,15 +34,15 @@
 				<div>chroma</div>
 				<div>hue</div>
 			</div>
-				<Swatch />
+			<Swatch />
 		</div>
-			<!-- <CopyButton
-				buttonWidth="100%"
-				buttonHeight="100%"
-				displayText="Copy whole palette"
-				bind:copyText={swatchesString}
-			/> -->
-		</div>
+		<CopyButton
+			buttonWidth="100%"
+			buttonHeight="100%"
+			displayText="Copy whole palette"
+			bind:copyText={formattedSwatches}
+		/>
+	</div>
 </div>
 
 <style>
