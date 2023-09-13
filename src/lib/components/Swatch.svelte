@@ -35,6 +35,7 @@
 
 <style>
 	.swatch {
+		grid-column: 1 / 3;
 		box-shadow: inset 0 0 0 1px oklch(50% 0 0 / 20%);
 		transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
 		width: 100%;
@@ -48,7 +49,7 @@
 
 	.values {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		place-items: center;
 	}
 

@@ -45,11 +45,9 @@
 
 		<div class="palette">
 			<div class="gridHeader">
-				<div />
 				<div>lightness</div>
 				<div>chroma</div>
 				<div>hue</div>
-				<div />
 			</div>
 			{#each Object.values(swatches) as swatch}
 				<Swatch bind:swatch />
@@ -110,8 +108,18 @@
 
 	.gridHeader {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		place-items: center;
+	}
+
+	.gridHeader div:nth-child(1) {
+		grid-column: 3 / 4;
+	}
+	.gridHeader div:nth-child(2) {
+		grid-column: 4 / 5;
+	}
+	.gridHeader div:nth-child(3) {
+		grid-column: 5 / 6;
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -140,4 +148,3 @@
 		}
 	}
 </style>
-
