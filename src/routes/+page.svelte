@@ -19,8 +19,9 @@
 	$: swatchSetup =
 		'--text-1: var(--swatch-1);\n--text-2: var(--swatch-2);\n--link: var(--swatch-3);\n--surface-1: var(--swatch-10);\n--surface-2: var(--swatch-9);\n--surface-3: var(--swatch-8);';
 
-	$: swatchesString = $formattedSwatches.join(';\n') + ';\n' + ';\n' + swatchSetup;
+	$: swatchesString = $formattedSwatches.join('\n') + '\n' + '\n' + swatchSetup;
 </script>
+
 
 <GithubCorner />
 

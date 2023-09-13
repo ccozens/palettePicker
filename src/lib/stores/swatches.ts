@@ -23,5 +23,5 @@ export const derivedSwatches = derived(swatches, ($swatches) =>
 
 
 export const formattedSwatches = derived(derivedSwatches, ($derivedSwatches) =>
-	$derivedSwatches.map((swatch, index) => `--swatch-${index}: ${swatch.colour}`)
+	$derivedSwatches.map((swatch, index) => `--swatch-${index+1}: ${swatch.colour};`)
 );

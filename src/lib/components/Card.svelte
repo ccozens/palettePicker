@@ -36,7 +36,7 @@
 	}
 
 	p {
-		max-inline-size: 40ch;
+		max-inline-size: 60ch;
 	}
 
 	/* style for injected html, restricted to local selector */
