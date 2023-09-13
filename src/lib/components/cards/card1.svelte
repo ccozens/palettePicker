@@ -2,10 +2,12 @@
 	import { Card } from '$lib/components';
 
 	const cardContent = {
-		heading: "What to do?",
-		small: 'Pick colours',
+		heading: "What is okLCH?",
+		small: 'A colour space!',
 		content:
-			'Slide the slider, tweak the individual values, copy the swatch, copy the whole palette, and have fun!'
+		`OKLCH is a colour space that offers up to 50% more colours than sRGB - <a href="https://www.smashingmagazine.com/2023/08/oklch-color-spaces-gamuts-css/" target="_blank">go here for a Smashing Magazine article explaining more</a>.  <br />
+		There\'s an amazing colour picker at <a href="https://oklch.com">oklch.com</a>.<br />And another with a great contrast checker at <a href="https://www.oddcontrast.com">oddcontrast.com</a>`
+
 	};
 </script>
 
