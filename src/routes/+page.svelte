@@ -3,10 +3,20 @@
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
-	import { formattedSwatches } from '$lib/stores/swatches';
+	import { derivedSwatches, formattedSwatches } from '$lib/stores/swatches';
 	export let hue: 320;
 
-	const swatchSetup =
+	$: swatch1 = $derivedSwatches[0].colour;
+	$: swatch2 = $derivedSwatches[1].colour;
+	$: swatch3 = $derivedSwatches[2].colour;
+	$: swatch4 = $derivedSwatches[3].colour;
+	$: swatch5 = $derivedSwatches[4].colour;
+	$: swatch6 = $derivedSwatches[5].colour;
+	$: swatch7 = $derivedSwatches[6].colour;
+	$: swatch8 = $derivedSwatches[7].colour;
+	$: swatch9 = $derivedSwatches[8].colour;
+	$: swatch10 = $derivedSwatches[9].colour;
+	$: swatchSetup =
 		'--text-1: var(--swatch-1);\n--text-2: var(--swatch-2);\n--link: var(--swatch-3);\n--surface-1: var(--swatch-10);\n--surface-2: var(--swatch-9);\n--surface-3: var(--swatch-8);';
 
 	$: swatchesString = $formattedSwatches.join(';\n') + ';\n' + ';\n' + swatchSetup;
@@ -14,7 +24,20 @@
 
 <GithubCorner />
 
-<div class="wrapper" style="--hue: {hue}">
+<div
+	class="wrapper"
+	style="
+					--swatch-1:{swatch1};
+					--swatch-2:{swatch2};
+					--swatch-3:{swatch3};
+					--swatch-4:{swatch4};
+					--swatch-5:{swatch5};
+					--swatch-6:{swatch6};
+					--swatch-7:{swatch7};
+					--swatch-8:{swatch8};
+					--swatch-9:{swatch9};
+					--swatch-10:{swatch10};"
+>
 	<div class="contentGrid">
 		<Header />
 		<Card1 />
@@ -42,17 +65,6 @@
 
 <style>
 	.wrapper {
-		--swatch-1: oklch(99% 0.05 var(--hue));
-		--swatch-2: oklch(90% 0.1 var(--hue));
-		--swatch-3: oklch(80% 0.2 var(--hue));
-		--swatch-4: oklch(72% 0.25 var(--hue));
-		--swatch-5: oklch(67% 0.31 var(--hue));
-		--swatch-6: oklch(50% 0.27 var(--hue));
-		--swatch-7: oklch(35% 0.25 var(--hue));
-		--swatch-8: oklch(25% 0.2 var(--hue));
-		--swatch-9: oklch(13% 0.2 var(--hue));
-		--swatch-10: oklch(5% 0.1 var(--hue));
-
 		--text-1: var(--swatch-1);
 		--text-2: var(--swatch-2);
 		--link: var(--swatch-3);
