@@ -41,7 +41,7 @@
 		<Card1 />
 		<Card2 />
 		<Card3 />
-		
+
 		<Picker bind:hue />
 
 		<div class="palette">
@@ -105,18 +105,18 @@
 
 	.gridHeader {
 		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		place-items: center;
 	}
 
 	.gridHeader div:nth-child(1) {
-		grid-column: 3 / 4;
+		grid-column: 2 / 3;
 	}
 	.gridHeader div:nth-child(2) {
-		grid-column: 4 / 5;
+		grid-column: 3 / 4;
 	}
 	.gridHeader div:nth-child(3) {
-		grid-column: 5 / 6;
+		grid-column: 4 / 5;
 	}
 
 	@media (prefers-color-scheme: light) {
@@ -136,6 +136,10 @@
 		.contentGrid {
 			columns: 2;
 			margin: auto;
+		}
+
+		.gridHeader {
+			grid-template-columns: 2fr repeat(4, 1fr);
 		}
 	}
 </style>
