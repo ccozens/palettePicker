@@ -1,7 +1,9 @@
 <!-- script -->
 <script lang="ts">
-	import { swatches, derivedSwatches } from '$lib/stores/values';
+	import { swatches, derivedSwatches } from '$lib/stores/swatches';
 	import UpdateSwatch from './UpdateSwatch.svelte';
+    import UpdateGlobalHue from './UpdateGlobalHue.svelte';
+
 </script>
 
 <!-- html -->
@@ -14,6 +16,9 @@
 <br />
 
 <hr />
+<UpdateGlobalHue />
+
+
 <div style="display:flex; ">
 	{#each $derivedSwatches as derivedSwatch}
 		<div style="display:flex; flex-direction: column; font-size: medium;">

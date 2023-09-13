@@ -5,7 +5,7 @@
 	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
 	import { allSwatchesToVariables } from '$lib/functions';
 	import type { SwatchesType } from '$lib/types';
-
+	
 	export let hue: 320;
 	// create array of 10 swatches storing lightness, chroma, and hue
 	let swatches: SwatchesType = {

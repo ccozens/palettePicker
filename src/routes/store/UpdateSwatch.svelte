@@ -1,6 +1,6 @@
 <!-- script -->
 <script lang="ts">
-	import { swatches } from '$lib/stores/values';
+	import { swatches } from '$lib/stores/swatches';
 </script>
 
 <!-- html -->
@@ -9,8 +9,8 @@
 <div style="display:flex">
 
     <input style="width: 120px;" type="text" bind:value={swatch.name} />
-	<input style="width: 120px;" type="number" bind:value={swatch.lightness} />
-    <input style="width: 120px;" type="number" bind:value={swatch.chroma} />
-    <input style="width: 120px;" type="number" bind:value={swatch.hue} />
+	<input style="width: 60px;" type="number" bind:value={swatch.lightness} />
+    <input style="width: 60px;" type="number" bind:value={swatch.chroma} />
+    <input style="width: 60px;" type="number" bind:value={swatch.hue} />
 </div>
 {/each}
