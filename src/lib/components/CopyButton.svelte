@@ -7,8 +7,7 @@
 	export let buttonHeight = '70%';
 	export let displayText = '';
 	export let copyText = 'Nothing to copy';
-	export let shadow1 = '1px';
-	export let shadow2 = '2px';
+
 
 	const fill = 'var(--swatch-1)';
 </script>
@@ -17,26 +16,27 @@
 {#if displayText === ''}
 	<button
 		style="--button-width: {buttonWidth};
-            --button-height: {buttonHeight};
-            --shadow1: {shadow1};
-            --shadow2: {shadow2};
-			--background: 'transparent';
+				--button-height: {buttonHeight};
+				--background: 'transparent';
 			"
 		use:copy={copyText}
 	>
 		<CopyMaterialSymbols {fill} />
 	</button>
 {:else}
-	<button
-		style="--button-width: {buttonWidth};
-	--button-height: {buttonHeight};
-	--shadow1: {shadow1};
-	--shadow2: {shadow2};
-	opacity: 1;
-	font-weight: 600;
-	padding: 0.7rem;"
-		use:copy={copyText}>{displayText}</button
-	>
+	<div class="copyHighlight">
+		<button
+			style="--button-width: {buttonWidth};
+				--button-height: {buttonHeight};
+				box-shadow: none;
+				opacity: 1;
+				font-weight: 600;
+				padding: 0.7rem;
+				margin: 0;
+			"
+			use:copy={copyText}>{displayText}</button
+		>
+	</div>
 {/if}
 
 <style>
@@ -50,13 +50,12 @@
 		padding: 0 0.7rem 0.7rem 0.7rem;
 		margin: 0.2rem;
 		border-radius: 0.25rem;
-		box-shadow: inset 0 0 0 1px var(--surface-2);
 		opacity: 0.5;
 	}
 
 	button:hover {
 		background: var(--swatch-7);
-		box-shadow: 0 0 0 var(--shadow1) var(--swatch-5), 0 0 0 calc(var(--shadow2)) var(--surface-3);
+		box-shadow: 0 0 1px 2px var(--surface-3);
 		transform: translateY(-2px);
 		cursor: copy;
 		transition: all 0.2s ease-in-out;
@@ -67,5 +66,14 @@
 		background: var(--swatch-6);
 		transform: scale(1.05);
 		box-shadow: 0px 0px 10px 5px var(--swatch-6), 0px 0px 15px 5px var(--swatch-6);
+	}
+
+	.copyHighlight {
+		border-radius: 0.25rem;
+		box-shadow: 0px 0px 5px 5px var(--swatch-6), 0px 0px 8px 8px var(--swatch-6);
+	}
+
+	.copyHighlight > button:hover {
+		transform: none;
 	}
 </style>
