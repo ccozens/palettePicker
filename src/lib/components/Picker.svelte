@@ -1,12 +1,22 @@
 <!-- script -->
 <script lang="ts">
-	export let hue: number = 320;
+	import { swatches } from '$lib/stores/swatches';
+
+	export let hue = 320;
+
+	// update all swatches
+	function updateAllSwatches() {
+		$swatches.forEach((swatch) => {
+			swatch.hue = hue;
+		});
+		$swatches = $swatches;
+	}
 </script>
 
 <!-- html -->
 <div class="picker">
 	<label for="hue">Hue</label>
-	<input type="range" min="0" max="360" step="1" bind:value={hue} />
+	<input type="range" min="0" max="360" step="1" bind:value={hue} on:change={updateAllSwatches} />
 </div>
 
 <style>
