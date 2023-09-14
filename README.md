@@ -1,8 +1,6 @@
 # OKLCH palette picker
 
-<p align="center">
---->  [Live site here](https://palette-picker-beta.vercel.app/)  <--
-</p>
+## --->  [Live site here](https://palette-picker-beta.vercel.app/)  <--
 
 ## What's OKLCH?
 OKLCH is a color space with a few advantages over the more common RGB and HSL color spaces. It's a perceptually uniform color space, meaning that the distance between two colors is proportional to the difference in their perceived brightness. This makes it easier to create palettes that look good together. It also has a lightness channel that's more intuitive than the one in HSL, and it's more suitable for color blending than RGB.
