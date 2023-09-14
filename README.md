@@ -32,6 +32,8 @@ The [CSS syntax for OKLCH](https://developer.mozilla.org/en-US/docs/Web/CSS/colo
 ## What's the site?
 This palette picker generates a range of 10 swatches, initially around a fixed hue and pre-set lightness and chroma. All the values can be tweaked individually and the swatches will update in real time. The swatches can be copied to the clipboard as CSS variables individually or as a whole palette.
 
+![site preview](https://github.com/ccozens/palettePicker/blob/main/src/lib/assets/pickerDemo.gif)
+
 The output of copying an individual swatch is: `oklch(99% 0.05 320)`.
 And the output of copying the whole palette is:
 ```
