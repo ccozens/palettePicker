@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
 	import { Card } from '$lib/components';
+	import type { CardContent } from '$lib/types';
 
-	const cardContent = {
+	const cardContent: CardContent = {
 		heading: "What's this site then?",
 		small: 'An okLCH palette picker!',
 		content:

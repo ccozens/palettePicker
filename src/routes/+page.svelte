@@ -83,7 +83,6 @@
 
 	.contentGrid {
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
-		width: fit-content;
 		margin: 0 auto;
 		padding: 1em;
 		border-radius: 0.25rem;
@@ -126,6 +125,8 @@
 		.contentGrid {
 			columns: 2;
 			margin: auto;
+			width: 1000px;
+			/* width: clamp(50ch, 80%, 100ch); */
 		}
 
 		.gridHeader {

@@ -21,7 +21,7 @@
 
 	.card {
 		display: grid;
-		gap: 1ch;
+		/* gap: 1ch; */
 		border-radius: 10px;
 		background: var(--surface-2);
 		border: 1px solid var(--surface-3);

@@ -1,11 +1,10 @@
-<script>
-	import { Header } from '$lib/components';
+<script lang="ts">
+	import { Card } from '$lib/components';
+	import type { CardContent } from '$lib/types';
 
-	const cardContent = {
+	const cardContent: CardContent = {
 		heading: 'Palette picker',
-		small: 'OKLCH colour space',
-		content: ''
 	};
 </script>
 
-<Header {...cardContent} />
+<Card {...cardContent} />
