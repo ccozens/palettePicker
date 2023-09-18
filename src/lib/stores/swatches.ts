@@ -9,8 +9,8 @@ export const swatches = writable([
 	{ name: 'swatch6', lightness: 50, chroma: 0.27, hue: 320 },
 	{ name: 'swatch7', lightness: 35, chroma: 0.25, hue: 320 },
 	{ name: 'swatch8', lightness: 25, chroma: 0.2, hue: 320 },
-	{ name: 'swatch9', lightness: 13, chroma: 0.2, hue: 320 },
-	{ name: 'swatch10', lightness: 5, chroma: 0.1, hue: 320 }
+	{ name: 'swatch9', lightness: 25, chroma: 0.1, hue: 320 },
+	{ name: 'swatch10', lightness: 20, chroma: 0.1, hue: 320 }
 ]);
 
 export const derivedSwatches = derived(swatches, ($swatches) =>

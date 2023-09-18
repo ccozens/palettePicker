@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { swatches, derivedSwatches } from '$lib/stores/swatches';
 	import CopyButton from './CopyButton.svelte';
-
+	import { isValidDisplayP3Color } from '$lib/functions';
 </script>
 
 <!-- html -->
@@ -22,6 +22,7 @@
 	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
 	<input type="number" bind:value={swatch.hue} min="0" max="360" />
 	<CopyButton bind:copyText={$derivedSwatches[index].colour} />
+	<div>{isValidDisplayP3Color($derivedSwatches[index].colour)}</div>
 	{/each}
 </div>
 
