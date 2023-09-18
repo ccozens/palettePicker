@@ -10,3 +10,6 @@ export { default as Picker } from './Picker.svelte';
 
 // Swatch
 export { default as Swatch } from './Swatch.svelte';
+
+// ThemePicker
+export { default as ThemePicker } from './ThemePicker.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Picker, Swatch } from '$lib/components';
+	import { Picker, Swatch, ThemePicker } from '$lib/components';
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Card1, Card2, Card3 } from '$lib/components/cards';
@@ -22,7 +22,6 @@
 	$: swatchesString = $formattedSwatches.join('\n') + '\n' + '\n' + swatchSetup;
 </script>
 
-
 <GithubCorner />
 
 <div
@@ -40,26 +39,32 @@
 					--swatch-10:{swatch10};"
 >
 	<div class="contentGrid">
-		<Card1 />
-		<Card2 />
-		<Card3 />
-
-		<Picker bind:hue />
-
-		<div class="palette">
-			<div class="gridHeader">
-				<div>L</div>
-				<div>C</div>
-				<div>H</div>
-			</div>
-			<Swatch />
+		<div class="contentGridOne">
+			<Card1 />
+			<Card2 />
+			<Card3 />
 		</div>
-		<CopyButton
-			buttonWidth="100%"
-			buttonHeight="100%"
-			displayText="Copy whole palette"
-			bind:copyText={swatchesString}
-		/>
+		<div class="contentGridTwo">
+			<Picker bind:hue />
+
+			<div class="palette">
+				<div class="gridHeader">
+					<div>L</div>
+					<div>C</div>
+					<div>H</div>
+				</div>
+				<Swatch />
+			</div>
+			<CopyButton
+				buttonWidth="100%"
+				buttonHeight="100%"
+				displayText="Copy whole palette"
+				bind:copyText={swatchesString}
+			/>
+		</div>
+		<div class="contentGridThree">
+			<ThemePicker />
+		</div>
 	</div>
 </div>
 
@@ -72,9 +77,6 @@
 		--surface-2: var(--swatch-9);
 		--surface-3: var(--swatch-8);
 
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
 		background: var(--surface-1);
 		padding: 2em 1em 1em 1em;
 		color: var(--text-1);
@@ -83,8 +85,11 @@
 	.contentGrid {
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
 		margin: 0 auto;
+		width: 85vw;
 		padding: 1em;
 		border-radius: 0.25rem;
+		display: grid;
+		grid-template-columns: 3fr 3fr 1fr;
 	}
 
 	.palette {
@@ -126,7 +131,5 @@
 			margin: auto;
 			width: 1000px;
 		}
-
-
 	}
 </style>
