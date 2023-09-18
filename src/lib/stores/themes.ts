@@ -19,7 +19,7 @@ export const themes = readable([
 	{
 		name: 'green',
 		swatches: [
-			{ name: 'swatch1', lightness: 96, chroma: 0.75, hue: 147 },
+			{ name: 'swatch1', lightness: 96, chroma: 0.05, hue: 147 },
 			{ name: 'swatch2', lightness: 90, chroma: 0.2, hue: 147 },
 			{ name: 'swatch3', lightness: 80, chroma: 0.2, hue: 147 },
 			{ name: 'swatch4', lightness: 86, chroma: 0.32, hue: 147 },
@@ -34,31 +34,31 @@ export const themes = readable([
 	{
 		name: 'blue',
 		swatches: [
-			{ name: 'swatch1', lightness: 96, chroma: 0.75, hue: 207 },
-			{ name: 'swatch2', lightness: 90, chroma: 0.2, hue: 207 },
-			{ name: 'swatch3', lightness: 80, chroma: 0.2, hue: 207 },
-			{ name: 'swatch4', lightness: 86, chroma: 0.32, hue: 207 },
-			{ name: 'swatch5', lightness: 77, chroma: 0.31, hue: 207 },
-			{ name: 'swatch6', lightness: 51, chroma: 0.2, hue: 207 },
-			{ name: 'swatch7', lightness: 39.5, chroma: 0.16, hue: 207 },
-			{ name: 'swatch8', lightness: 25, chroma: 0.1, hue: 207 },
-			{ name: 'swatch9', lightness: 16, chroma: 0.06, hue: 207 },
-			{ name: 'swatch10', lightness: 17, chroma: 0.03, hue: 207 }
+			{ name: 'swatch1', lightness: 95, chroma: 0.02, hue: 250 },
+			{ name: 'swatch2', lightness: 87, chroma: 0.06, hue: 250 },
+			{ name: 'swatch3', lightness: 80, chroma: 0.1, hue: 250 },
+			{ name: 'swatch4', lightness: 76, chroma: 0.13, hue: 250 },
+			{ name: 'swatch5', lightness: 62, chroma: 0.22, hue: 250 },
+			{ name: 'swatch6', lightness: 51, chroma: 0.15, hue: 250 },
+			{ name: 'swatch7', lightness: 42, chroma: 0.15, hue: 250 },
+			{ name: 'swatch8', lightness: 22, chroma: 0.05, hue: 250 },
+			{ name: 'swatch9', lightness: 17, chroma: 0.03, hue: 250 },
+			{ name: 'swatch10', lightness: 14, chroma: 0.02, hue: 250 }
 		]
 	},
 	{
 		name: 'purple',
 		swatches: [
-			{ name: 'swatch1', lightness: 96, chroma: 0.75, hue: 267 },
-			{ name: 'swatch2', lightness: 90, chroma: 0.2, hue: 267 },
-			{ name: 'swatch3', lightness: 80, chroma: 0.2, hue: 267 },
-			{ name: 'swatch4', lightness: 86, chroma: 0.32, hue: 267 },
-			{ name: 'swatch5', lightness: 77, chroma: 0.31, hue: 267 },
-			{ name: 'swatch6', lightness: 51, chroma: 0.2, hue: 267 },
-			{ name: 'swatch7', lightness: 39.5, chroma: 0.16, hue: 267 },
-			{ name: 'swatch8', lightness: 25, chroma: 0.1, hue: 267 },
-			{ name: 'swatch9', lightness: 16, chroma: 0.06, hue: 267 },
-			{ name: 'swatch10', lightness: 17, chroma: 0.03, hue: 267 }
+			{ name: 'swatch1', lightness: 96, chroma: 0.02, hue: 295 },
+			{ name: 'swatch2', lightness: 89, chroma: 0.06, hue: 295 },
+			{ name: 'swatch3', lightness: 80, chroma: 0.12, hue: 295 },
+			{ name: 'swatch4', lightness: 75, chroma: 0.15, hue: 295 },
+			{ name: 'swatch5', lightness: 70, chroma: 0.19, hue: 295 },
+			{ name: 'swatch6', lightness: 62, chroma: 0.24, hue: 295 },
+			{ name: 'swatch7', lightness: 43, chroma: 0.24, hue: 295 },
+			{ name: 'swatch8', lightness: 25, chroma: 0.14, hue: 295 },
+			{ name: 'swatch9', lightness: 20, chroma: 0.11, hue: 295 },
+			{ name: 'swatch10', lightness: 9, chroma: 0.05, hue: 295 }
 		]
 	},
 	{
@@ -66,7 +66,7 @@ export const themes = readable([
 		swatches: [
 			{ name: 'swatch1', lightness: 96, chroma: 0.75, hue: 47 },
 			{ name: 'swatch2', lightness: 90, chroma: 0.2, hue: 47 },
-			{ name: 'swatch3', lightness: 80, chroma: 0.2, hue: 47 },
+			{ name: 'swatch3', lightness: 80, chroma: 0.12, hue: 47 },
 			{ name: 'swatch4', lightness: 86, chroma: 0.32, hue: 47 },
 			{ name: 'swatch5', lightness: 77, chroma: 0.31, hue: 47 },
 			{ name: 'swatch6', lightness: 51, chroma: 0.2, hue: 47 },
