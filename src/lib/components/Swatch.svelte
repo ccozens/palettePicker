@@ -42,6 +42,7 @@
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		place-items: center;
+		/* grid-auto-rows: 1fr; */
 	}
 
 	input {
@@ -49,8 +50,8 @@
 		background: var(--surface-3);
 		text-align: center;
 		color: inherit;
-		width: 80%;
-		height: 70%;
+		width: 85%;
+		height: 80%;
 		font-size: 1rem;
 		padding: 0.5rem;
 		border-radius: 0.25rem;
