@@ -2,7 +2,7 @@
 	import { Picker, Swatch } from '$lib/components';
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
-	import { Header, Card1, Card2, Card3 } from '$lib/components/cards';
+	import { Card1, Card2, Card3 } from '$lib/components/cards';
 	import { derivedSwatches, formattedSwatches } from '$lib/stores/swatches';
 	export let hue: 320;
 
@@ -40,7 +40,6 @@
 					--swatch-10:{swatch10};"
 >
 	<div class="contentGrid">
-		<Header />
 		<Card1 />
 		<Card2 />
 		<Card3 />

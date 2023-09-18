@@ -10,7 +10,7 @@
 	const cardContent: CardContent = {
 		heading: "What's the output?",
 		small: 'CSS variables',
-		content: `Copy an individual colour and you get: <br /> oklch(99% 0.05 320) <br />. Copy the whole palette and you get: <br />${output}`
+		content: `Copy a swatch and you get: \`oklch(99% 0.05 320)\`. <br /> Copy the whole palette and you get: <br />${output}`
 	};
 </script>
 
