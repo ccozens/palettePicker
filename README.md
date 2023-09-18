@@ -55,13 +55,17 @@ And the output of copying the whole palette is:
 ```
 
 ## What's the tech?
-This is a [svelte app](https://svelte.dev/), hosted at Vercel. It has fairly few dependencies, and I can recommend [svelte-copy](https://www.npmjs.com/package/svelte-copy) for copying to the clipboard.
+This is a [svelte app](https://svelte.dev/), hosted at Vercel. It has fairly few dependencies:
+- [svelte-copy](https://www.npmjs.com/package/svelte-copy) is lovely and simple for copying to the clipboard.
+- [colorsjs.io](https://colorsjs.io/) is used for checking whether colours are valid in the [Display P3 colour space](https://en.wikipedia.org/wiki/DCI-P3).
 
 ## What's next?
 Ideally, I'd like to add a number of features inspired by the [evil martians OKLCH picker](https://oklch.com/) and [oddbird's oddcontrast](oddcontrast.com). For now, I'm not letting perfect be the enemy of good enough and moving on to other projects, as this is functional. If you have any suggestions, please let me know!
 
 My list of nice-to-haves includes:
-- conversion to other color spaces
-- accessibility contrast checks
-- color blindness simulation
-- checking a colour exists in colour space (e.g. oklch(82% 0.155 228) is an invalid colour in any colour space)
+| Feature |  Done ? |
+|:-------:|:------:|
+|Conversion to other color spaces ||
+|Color blindness simulation ||
+|Accessibility contrast checks ||
+|Check each colour exists in P3 gamut (e.g. oklch(82% 0.155 228) is an invalid colour in any colour space) |added in [commit cfbfd0a](https://github.com/ccozens/palettePicker/commit/cfbfd0a6f5e7773b484c0ec50bc1bef486f22521)|
