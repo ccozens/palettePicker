@@ -1,6 +1,8 @@
 import { writable, derived } from 'svelte/store';
+import type { Writable } from 'svelte/store';
+import type { SwatchType } from '$lib/types';
 
-export const swatches = writable([
+export const swatches: Writable<SwatchType[]> = writable([
 	{ name: 'swatch1', lightness: 94, chroma: 0.04, hue: 320 },
 	{ name: 'swatch2', lightness: 89, chroma: 0.09, hue: 320 },
 	{ name: 'swatch3', lightness: 74, chroma: 0.24, hue: 320 },
