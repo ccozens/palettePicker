@@ -6,25 +6,24 @@
 </script>
 
 <!-- html -->
-<div class="values">
-	{#each $swatches as swatch, index}
-	<a
-		data-sveltekit-preload-data="hover"
-		href='https://oklch.com/#{swatch.lightness},{swatch.chroma},{swatch.hue},100'
-		target="_blank"
-		class="swatch"
-		style="background:{$derivedSwatches[index].colour}"
-	>
-		<span class="screen-reader-only">Link to OKLCH.com colour viewer</span>
-	</a>
-	<!-- bind:value={swatch.lightness} as this passes the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
-	<input type="number" bind:value={swatch.lightness} min="0" max="100" />
-	<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
-	<input type="number" bind:value={swatch.hue} min="0" max="360" />
-	<CopyButton bind:copyText={$derivedSwatches[index].colour} />
-	<div>{isValidDisplayP3Color($derivedSwatches[index].colour)}</div>
-	{/each}
-</div>
+{#each $swatches as swatch, index}
+	<div class="values">
+		<a
+			data-sveltekit-preload-data="hover"
+			href="https://oklch.com/#{swatch.lightness},{swatch.chroma},{swatch.hue},100"
+			target="_blank"
+			class="swatch"
+			style="background:{$derivedSwatches[index].colour}"
+		>
+			<span class="screen-reader-only">Link to OKLCH.com colour viewer</span>
+		</a>
+		<!-- bind:value={swatch.lightness} as this passes the swatch prop by reference, so that changes to the hue value in the input element will update the original hue value in the swatch object -->
+		<input type="number" bind:value={swatch.lightness} min="0" max="100" />
+		<input type="number" bind:value={swatch.chroma} min="0" max="1" step="0.01" />
+		<input type="number" bind:value={swatch.hue} min="0" max="360" />
+		<CopyButton bind:copyText={$derivedSwatches[index].colour} />
+	</div>
+{/each}
 
 <style>
 	.swatch {
@@ -41,9 +40,8 @@
 
 	.values {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: 2fr repeat(4, 1fr);
 		place-items: center;
-		/* grid-auto-rows: 1fr; */
 	}
 
 	input {
@@ -51,8 +49,8 @@
 		background: var(--surface-3);
 		text-align: center;
 		color: inherit;
-		width: 85%;
-		height: 80%;
+		width: 95%;
+		height: 95%;
 		font-size: 1rem;
 		padding: 0.5rem;
 		border-radius: 0.25rem;
@@ -60,6 +58,9 @@
 		transition: box-shadow 0.2s ease-in-out;
 	}
 
+	input.invalid {
+		border: solid 2px yellow;
+	}
 	input:hover {
 		box-shadow: inset 0 0 0 1px var(--swatch-6), 0 0 0 2px var(--surface-3);
 	}
@@ -87,11 +88,5 @@
 		white-space: nowrap;
 		overflow: hidden;
 		width: 1px;
-	}
-
-	@media (min-width: 1000px) {
-		.values {
-			grid-template-columns: 2fr repeat(4, 1fr);
-		}
 	}
 </style>

@@ -48,9 +48,9 @@
 
 		<div class="palette">
 			<div class="gridHeader">
-				<div>lightness</div>
-				<div>chroma</div>
-				<div>hue</div>
+				<div>L</div>
+				<div>C</div>
+				<div>H</div>
 			</div>
 			<Swatch />
 		</div>
@@ -93,7 +93,7 @@
 
 	.gridHeader {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: 2fr repeat(4, 1fr);
 		place-items: center;
 	}
 
@@ -125,11 +125,8 @@
 			columns: 2;
 			margin: auto;
 			width: 1000px;
-			/* width: clamp(50ch, 80%, 100ch); */
 		}
 
-		.gridHeader {
-			grid-template-columns: 2fr repeat(4, 1fr);
-		}
+
 	}
 </style>
