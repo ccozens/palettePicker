@@ -1,6 +1,6 @@
 <!-- script -->
 <script lang="ts">
-	import { swatches, derivedSwatches } from '$lib/stores/swatches';
+	import { swatches, derivedSwatches } from '$lib/stores';
 	import CopyButton from './CopyButton.svelte';
 	import { isValidDisplayP3Color } from '$lib/functions';
 </script>

@@ -3,7 +3,7 @@
 	import CopyButton from '$lib/components/CopyButton.svelte';
 	import GithubCorner from '$lib/components/GithubCorner.svelte';
 	import { Card1, Card2, Card3 } from '$lib/components/cards';
-	import { derivedSwatches, formattedSwatches } from '$lib/stores/swatches';
+	import { derivedSwatches, formattedSwatches } from '$lib/stores';
 	export let hue: 320;
 
 	$: swatch1 = $derivedSwatches[0].colour;

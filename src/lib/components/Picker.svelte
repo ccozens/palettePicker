@@ -1,6 +1,6 @@
 <!-- script -->
 <script lang="ts">
-	import { swatches } from '$lib/stores/swatches';
+	import { swatches } from '$lib/stores';
 
 	export let hue = 320;
 

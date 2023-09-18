@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { derivedSwatches } from '$lib/stores/swatches';
+	import { derivedSwatches } from '$lib/stores';
 
 	$: fill = $derivedSwatches[4].colour;
-	$: color = $derivedSwatches[9].colour;;
+	$: color = $derivedSwatches[9].colour;
 </script>
 
 <a
 	href="https://github.com/ccozens/palettePicker"
 	class="github-corner"
 	aria-label="View source on GitHub"
+	target="_blank"
 	><svg
 		width="80"
 		height="80"
