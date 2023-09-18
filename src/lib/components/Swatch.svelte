@@ -7,13 +7,15 @@
 
 <!-- html -->
 {#each $swatches as swatch, index}
-	<div class="values">
+	<div class="values {isValidDisplayP3Color($derivedSwatches[index].colour) ? '' : 'invalid'}">
 		<a
 			data-sveltekit-preload-data="hover"
 			href="https://oklch.com/#{swatch.lightness},{swatch.chroma},{swatch.hue},100"
 			target="_blank"
 			class="swatch"
-			style="background:{$derivedSwatches[index].colour}"
+			style="background:{isValidDisplayP3Color($derivedSwatches[index].colour)
+				? $derivedSwatches[index].colour
+				: 'var(--text-1)'}"
 		>
 			<span class="screen-reader-only">Link to OKLCH.com colour viewer</span>
 		</a>
@@ -58,8 +60,20 @@
 		transition: box-shadow 0.2s ease-in-out;
 	}
 
-	input.invalid {
-		border: solid 2px yellow;
+	.invalid > input {
+		background: var(--text-1);
+		color: var(--surface-3);
+	}
+
+	.invalid > .swatch {
+		background: var(--text-1);
+	}
+
+	.invalid > a::before {
+		color: var(--surface-3);
+		content: 'Invalid colour in Display-P3';
+		display: block;
+		text-align: center;
 	}
 	input:hover {
 		box-shadow: inset 0 0 0 1px var(--swatch-6), 0 0 0 2px var(--surface-3);
