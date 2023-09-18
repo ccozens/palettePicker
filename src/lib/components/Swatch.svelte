@@ -71,7 +71,9 @@
 
 	.invalid > a::before {
 		color: var(--surface-3);
-		content: 'Invalid colour in Display-P3';
+		content: 'Colour not in P3 gamut. Click for picker.';
+		font-size: 0.8rem;
+		padding: 0.3rem;
 		display: block;
 		text-align: center;
 	}
