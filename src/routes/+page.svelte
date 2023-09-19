@@ -107,5 +107,27 @@
 		}
 	}
 
-
+@media (min-width: 1000px) {
+	.wrapper {
+		padding: 2em 4em 1em 4em;
+	}
+	.contentGrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 1em;
+	}
+	.contentGridOne {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+	.contentGridTwo {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+	.contentGridThree {
+		grid-column: 3 / 4;
+		grid-row: 1 / 2;
+	}
+}
 </style>
