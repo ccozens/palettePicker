@@ -48,11 +48,6 @@
 			<Picker bind:hue />
 
 			<div class="palette">
-				<div class="gridHeader">
-					<div>L</div>
-					<div>C</div>
-					<div>H</div>
-				</div>
 				<Swatch />
 			</div>
 			<CopyButton
@@ -91,11 +86,6 @@
 		margin: 1em auto;
 	}
 
-	.gridHeader {
-
-	}
-
-
 
 	@media (prefers-color-scheme: light) {
 		.wrapper {
@@ -109,11 +99,12 @@
 
 @media (min-width: 1000px) {
 	.wrapper {
+		min-height: 100vh;
 		padding: 2em 4em 1em 4em;
 	}
 	.contentGrid {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 2fr 4fr 1fr;
 		grid-template-rows: 1fr;
 		grid-gap: 1em;
 	}

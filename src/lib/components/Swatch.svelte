@@ -6,7 +6,11 @@
 </script>
 
 <!-- html -->
-
+<div class="values">
+	<div>L</div>
+	<div>C</div>
+	<div>H</div>
+</div>
 {#each $swatches as swatch, index}
 	<div class="values {isValidDisplayP3Color($derivedSwatches[index].colour) ? '' : 'invalid'}">
 		<a
