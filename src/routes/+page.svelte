@@ -127,9 +127,8 @@
 			min-height: 100vh;
 		}
 		.contentGrid {
-			columns: 2;
 			margin: auto;
-			width: 1000px;
+			max-width: 2000px;
 		}
 	}
 </style>
