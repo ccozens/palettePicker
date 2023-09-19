@@ -66,7 +66,7 @@ My list of nice-to-haves includes:
 | Feature |  Done ? |
 |:-------:|:------:|
 |Conversion to other color spaces ||
-|Add preset palettes (eg pinks / greens / blues) ||
+|Add preset palettes (eg pinks / greens / blues) |added in [commit f3dde1c](https://github.com/ccozens/palettePicker/commit/f3dde1c30507771f1f36b3ddc7807cd9a4e94ce5)|
 |Color blindness simulation ||
 |Accessibility contrast checks ||
 |Check each colour exists in P3 gamut (e.g. oklch(82% 0.155 228) is an invalid colour in any colour space) |added in [commit cfbfd0a](https://github.com/ccozens/palettePicker/commit/cfbfd0a6f5e7773b484c0ec50bc1bef486f22521)|
