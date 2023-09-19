@@ -84,12 +84,7 @@
 
 	.contentGrid {
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
-		margin: 0 auto;
-		width: 85vw;
-		min-height: 80vh;
-		padding: 1em;
-		border-radius: 0.25rem;
-		display: grid;
+
 	}
 
 	.palette {
@@ -97,20 +92,10 @@
 	}
 
 	.gridHeader {
-		display: grid;
-		grid-template-columns: 2fr repeat(4, 1fr);
-		place-items: center;
+
 	}
 
-	.gridHeader div:nth-child(1) {
-		grid-column: 2 / 3;
-	}
-	.gridHeader div:nth-child(2) {
-		grid-column: 3 / 4;
-	}
-	.gridHeader div:nth-child(3) {
-		grid-column: 4 / 5;
-	}
+
 
 	@media (prefers-color-scheme: light) {
 		.wrapper {
@@ -122,14 +107,5 @@
 		}
 	}
 
-	@media (min-width: 1000px) {
-		.wrapper {
-			min-height: 100vh;
-		}
-		.contentGrid {
-			margin: auto;
-			min-height: 80vh;
-			grid-template-columns: 3fr 3fr 1fr;
-		}
-	}
+
 </style>

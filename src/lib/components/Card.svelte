@@ -21,7 +21,6 @@
 
 	.card {
 		display: grid;
-		/* gap: 1ch; */
 		border-radius: 10px;
 		background: var(--surface-2);
 		border: 1px solid var(--surface-3);
@@ -35,6 +34,9 @@
 		margin: 0;
 	}
 
+	p {
+		max-inline-size: 60ch;
+	}
 
 	/* style for injected html, restricted to local selector */
 	p :global(a) {
