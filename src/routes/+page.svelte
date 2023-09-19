@@ -79,7 +79,6 @@
 
 	.contentGrid {
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
-
 	}
 
 	.palette {
@@ -104,7 +103,7 @@
 	}
 	.contentGrid {
 		display: grid;
-		grid-template-columns: 2fr 4fr 1fr;
+		grid-template-columns: 3fr 5fr 1fr;
 		grid-template-rows: 1fr;
 		grid-gap: 1em;
 	}
