@@ -28,8 +28,7 @@
 			style="color:{swatchAsColour(theme.swatches[0])}; background-color:{swatchAsColour(
 				theme.swatches[5]
 			)};"
-			><span class="themeText">{theme.name}</span>
-		</button>
+		/>
 	{/each}
 </div>
 
@@ -56,11 +55,6 @@
 		transform: scale(1.05);
 	}
 
-	.themeText {
-		visibility: hidden;
-		display: none;
-	}
-
 	@media (min-width: 1000px) {
 		.themeBlock {
 			flex-direction: column;
@@ -72,13 +66,7 @@
 		}
 		h2 {
 			text-align: center;
-			margin: 1rem ;
+			margin: 1rem;
 		}
-
-		.themeText {
-			visibility: visible;
-			display: block;
-		}
-
 	}
 </style>
