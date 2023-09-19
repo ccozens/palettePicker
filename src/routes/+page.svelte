@@ -128,7 +128,6 @@
 		}
 		.contentGrid {
 			margin: auto;
-			max-width: 2000px;
 		}
 	}
 </style>
