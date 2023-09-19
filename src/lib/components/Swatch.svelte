@@ -1,16 +1,13 @@
 <!-- script -->
 <script lang="ts">
+	import { SwatchHeader } from '$lib/components';
 	import { swatches, derivedSwatches } from '$lib/stores';
 	import CopyButton from './CopyButton.svelte';
 	import { isValidDisplayP3Color } from '$lib/functions';
 </script>
 
 <!-- html -->
-<div class="values">
-	<div>L</div>
-	<div>C</div>
-	<div>H</div>
-</div>
+<SwatchHeader />
 {#each $swatches as swatch, index}
 	<div class="values {isValidDisplayP3Color($derivedSwatches[index].colour) ? '' : 'invalid'}">
 		<a
