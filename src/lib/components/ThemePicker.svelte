@@ -17,8 +17,8 @@
 
 <!-- html -->
 
+<h2>Themes</h2>
 <div class="themeBlock">
-	<h2>Themes</h2>
 	{#each $themes as theme}
 		<button
 			on:click={() => {
@@ -28,17 +28,17 @@
 			style="color:{swatchAsColour(theme.swatches[0])}; background-color:{swatchAsColour(
 				theme.swatches[5]
 			)};"
-			>{theme.name}
+			><span class="themeText">{theme.name}</span>
 		</button>
 	{/each}
 </div>
 
 <style>
+	h2 {
+		margin-top: 1rem;
+	}
 	.themeBlock {
-		display: grid;
-		padding: 1rem;
-		grid-auto-rows: 1fr;
-		height: 100%;
+		display: flex;
 	}
 
 	.themeName {
@@ -47,10 +47,39 @@
 		/* box-shadow: inset 0 0 0 1px var(--surface-2); */
 		transition: box-shadow 0.2s ease-in-out;
 		cursor: pointer;
+		height: 2rem;
+		width: 2rem;
+		margin: 0 auto;
 	}
 
 	.themeName:hover {
 		box-shadow: inset 0 0 0 1px var(--surface-1);
 		transform: scale(1.05);
+	}
+
+	.themeText {
+		visibility: hidden;
+		display: none;
+	}
+
+	@media (min-width: 1000px) {
+		.themeBlock {
+			flex-direction: column;
+		}
+		.themeName {
+			height: 3rem;
+			width: 5rem;
+			margin: 0.5rem auto;
+		}
+		h2 {
+			text-align: center;
+			margin: 1rem ;
+		}
+
+		.themeText {
+			visibility: visible;
+			display: block;
+		}
+
 	}
 </style>

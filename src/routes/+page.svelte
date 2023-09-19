@@ -86,10 +86,10 @@
 		box-shadow: inset 0 0 0 1px var(--swatch-1), 0 0 2px 2px var(--swatch-1);
 		margin: 0 auto;
 		width: 85vw;
+		min-height: 80vh;
 		padding: 1em;
 		border-radius: 0.25rem;
 		display: grid;
-		grid-template-columns: 3fr 3fr 1fr;
 	}
 
 	.palette {
@@ -128,6 +128,8 @@
 		}
 		.contentGrid {
 			margin: auto;
+			min-height: 80vh;
+			grid-template-columns: 3fr 3fr 1fr;
 		}
 	}
 </style>

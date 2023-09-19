@@ -6,7 +6,7 @@ export const swatches: Writable<SwatchType[]> = writable([
 	{ name: 'swatch1', lightness: 94, chroma: 0.04, hue: 320 },
 	{ name: 'swatch2', lightness: 89, chroma: 0.09, hue: 320 },
 	{ name: 'swatch3', lightness: 74, chroma: 0.24, hue: 320 },
-	{ name: 'swatch4', lightness: 67, chroma: 0.31, hue: 320 },
+	{ name: 'swatch4', lightness: 65, chroma: 0.33, hue: 320 },
 	{ name: 'swatch5', lightness: 60, chroma: 0.3, hue: 320 },
 	{ name: 'swatch6', lightness: 50, chroma: 0.255, hue: 320 },
 	{ name: 'swatch7', lightness: 35, chroma: 0.18, hue: 320 },
