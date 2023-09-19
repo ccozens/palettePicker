@@ -98,7 +98,7 @@
 		}
 	}
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	.wrapper {
 		min-height: 100vh;
 		padding: 2em 4em 1em 4em;

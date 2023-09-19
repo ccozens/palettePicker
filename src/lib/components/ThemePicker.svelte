@@ -55,7 +55,7 @@
 		transform: scale(1.05);
 	}
 
-	@media (min-width: 1000px) {
+	@media screen and (min-width: 1000px) {
 		.themeBlock {
 			flex-direction: column;
 		}
