@@ -35,9 +35,6 @@
 		margin: 0;
 	}
 
-	p {
-		max-inline-size: 60ch;
-	}
 
 	/* style for injected html, restricted to local selector */
 	p :global(a) {
