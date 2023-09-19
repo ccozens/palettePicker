@@ -44,7 +44,6 @@
 	.themeName {
 		border-radius: 0.25rem;
 		border: none;
-		/* box-shadow: inset 0 0 0 1px var(--surface-2); */
 		transition: box-shadow 0.2s ease-in-out;
 		cursor: pointer;
 		height: 2rem;
