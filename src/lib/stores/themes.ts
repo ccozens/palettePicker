@@ -19,16 +19,16 @@ export const themes = readable([
 	{
 		name: 'green',
 		swatches: [
-			{ name: 'swatch1', lightness: 96, chroma: 0.05, hue: 147 },
+			{ name: 'swatch1', lightness: 96, chroma: 0.2, hue: 147 },
 			{ name: 'swatch2', lightness: 90, chroma: 0.2, hue: 147 },
-			{ name: 'swatch3', lightness: 80, chroma: 0.2, hue: 147 },
+			{ name: 'swatch3', lightness: 88, chroma: 0.24, hue: 147 },
 			{ name: 'swatch4', lightness: 86, chroma: 0.32, hue: 147 },
 			{ name: 'swatch5', lightness: 77, chroma: 0.31, hue: 147 },
 			{ name: 'swatch6', lightness: 51, chroma: 0.2, hue: 147 },
 			{ name: 'swatch7', lightness: 39.5, chroma: 0.16, hue: 147 },
 			{ name: 'swatch8', lightness: 25, chroma: 0.1, hue: 147 },
-			{ name: 'swatch9', lightness: 16, chroma: 0.06, hue: 147 },
-			{ name: 'swatch10', lightness: 17, chroma: 0.03, hue: 147 }
+			{ name: 'swatch9', lightness: 20, chroma: 0.08, hue: 147 },
+			{ name: 'swatch10', lightness: 16, chroma: 0.06, hue: 147 }
 		]
 	},
 	{
